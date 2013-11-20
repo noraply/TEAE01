@@ -1,4 +1,4 @@
-\documentclass[10pt,a4paper]{report} 
+\documentclass[10pt,a4paper]{article} 
 % Style
 \usepackage{amsfonts}
 \usepackage{amsmath}
@@ -27,61 +27,35 @@
 
 % ---Title page ---
 
+\title{Företagsanalys Tekniska Verken}
+
+\author{Johan Berneland, Sofia Larsson Cahlin, Benjamin Lundahl \\
+    Nora Björklund, Christopher Hallberg}
+\date{\today}
 
 % ---Dokumen start---
 
 \begin{document}
 
-\chapter*{Sammanfattning TSRT78}
 
-\section*{Frequency Models}
-\subsection*{DTFT - Discrete-time Fourier Transform}
-\begin{eqnarray}
-X_T (e^{i \omega T}) = \sum_{\infty}^{k=-\infty} x[k] e^{-\omega k T}
-\end{eqnarray}
+\maketitle
 
-\subsection*{DFT - Discrete Fourier Transform}
-\begin{eqnarray}
-&& x[k] = x(kT)  \textrm{   (signal) }\\
-&& X[n] = \sum_{k=0}^{N-1} x[k] e^{-2 \pi i k n /N}  \textrm{   (DFT) }\\
-&& x[k] = \frac{1}{N} \sum_{n=0}^{N-1} e^{i 2 \pi \frac{n k}{N}} X[n] \textrm{ (invers trensform)}
-\end{eqnarray}
-Där $x[k]$ är den diskreta signalen man utgå ifrån, $X[n]$ DFT av $x[k]$, $N$ är antalet sampel och $n$ är ett sampel av $N$.
+\newpage
 
-\subsection*{Periodogram}
-\begin{eqnarray}
-\end{eqnarray}
+\tableofcontents
 
-\subsection*{Nyqvist Frequency}
-\begin{eqnarray}
-\omega _N = \omega _s /2
-\end{eqnarray}
+\newpage
 
-\subsection*{Downsizing}
-\begin{verbatim}
-decimate(x,r)
-\end{verbatim}
-$x = signal$, använd varje r:te element ur x och lågpassfiltrerar.
+\section{Bakgrund och syfte}
+Bakgrund
 
-\subsection*{Up-sizing}
-Zero-padding:
-\begin{verbatim}
-xhat = [x,zeros(1,N*(p-1))]
-\end{verbatim}
-$p =$ antal ggr som signalen ska förstoras.
-\begin{verbatim}
-N*p = length(xhat)
-\end{verbatim}
-\section*{Stochastic Signals and spectral Models}
-\subsection*{Frequencies}
-To find dominant frequencies in a signal use fft and zero-padding:
-\begin{verbatim}
-yhat = [y', zeros(1,(p-1)*N)];
-Y = fft(yhat);
-\end{verbatim}
-Increase p until the dominant frequencies are clearly visible. Non parametric method
+\section{Metod}
 
-\section*{Signal Filtering}
+\section{Resultat och analys}
+
+\section{Slutsatser}
+
+\section{Referenser}
 
 
 \end{document}
